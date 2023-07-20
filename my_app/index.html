@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./css/style.css">
     <!-- BOOTSTRAP LINK -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css' integrity='sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==' crossorigin='anonymous'/>
     <!-- AXIOS LINK -->
@@ -22,7 +24,7 @@
                         <div class="col-12">
                             <h1 class="display-1 text-muted">Todo List</h1>
                             <ul class="list-group list-group-flush border border-1 rounded">
-                                <li></li>
+                                <li v-for="(task, i) in tasks" :key="i" class="list-group-item">{{ task }}</li>
                             </ul>
                         </div>
                     </div>
@@ -32,9 +34,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <form>
+                            <form @submit.prevent="addTask">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Inserisci elemento..">
+                                    <input v-model.trim="newTask" type="text" class="form-control" placeholder="Inserisci elemento..">
                                     <button class="btn btn-primary" id="button-add">Inserisci</button>
                                 </div>
                             </form>
