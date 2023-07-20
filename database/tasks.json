@@ -1,8 +1,8 @@
 [
-    { "text": "HTML", "completed": false },
-    { "text": "CSS", "completed": false },
+    { "text": "HTML", "completed": true },
+    { "text": "CSS", "completed": true },
     { "text": "Responsive Design", "completed": false },
     { "text": "PHP", "completed": false },
     { "text": "Laravel", "completed": false },
-    { "text": "Javascript", "completed": false }
+    { "text": "Javascript", "completed": true }
   ]

@@ -16,7 +16,14 @@ methods:{
             this.tasks.push(res.data);
             this.newTask = '';
         });
-    }
+    },
+    toggleCompleted(index) {
+        this.tasks[index].completed = !this.tasks[index].completed;
+        const updatedTask = { ...this.tasks[index] };
+        axios.post('http://localhost/php-todo-list-json/api/tasks/', updatedTask)
+          .then(() => {
+          });
+      }
 },
 created(){
     axios.get('http://localhost/php-todo-list-json/api/tasks/')

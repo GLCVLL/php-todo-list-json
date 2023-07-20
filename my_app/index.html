@@ -24,7 +24,10 @@
                         <div class="col-12">
                             <h1 class="display-1 text-muted">Todo List</h1>
                             <ul class="list-group list-group-flush border border-1 rounded">
-                                <li v-for="(task, i) in tasks" :key="i" class="list-group-item">{{ task }}</li>
+                                <li v-for="(task, i) in tasks" :key="i" class="list-group-item" :class="{ 'completed': task.completed }">
+                                    <span v-if="!task.completed">{{ task.text }}</span>
+                                    <span v-else class="text-decoration-line-through">{{ task.text }}</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
