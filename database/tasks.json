@@ -1,1 +1,8 @@
-["HTML","CSS","Responsive Design","PHP","Laravel","Javascript","ciao"]
+[
+    { "text": "HTML", "completed": false },
+    { "text": "CSS", "completed": false },
+    { "text": "Responsive Design", "completed": false },
+    { "text": "PHP", "completed": false },
+    { "text": "Laravel", "completed": false },
+    { "text": "Javascript", "completed": false }
+  ]
